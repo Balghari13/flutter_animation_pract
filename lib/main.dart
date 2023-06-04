@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practise/foo_animation.dart';
+import 'package:practise/test.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,15 @@ class HomePage extends StatelessWidget {
           children: [
             ElevatedButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>FooAnimationPage()));
-            }, child: Text('Foo Animation'))
+            }, child: Text('Foo Animation')),
+
+
+
+
+
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>TestPage()));
+            }, child: Text('Testing'))
           ],
         ),
       ),
