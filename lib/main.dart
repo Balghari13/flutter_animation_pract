@@ -7,7 +7,6 @@ import 'package:practise/hero/hero_animation.dart';
 import 'package:practise/listwheel_scrollView.dart';
 import 'package:practise/map_list.dart';
 import 'package:practise/ripple_effect.dart';
-import 'package:practise/test.dart';
 import 'package:practise/tween_animation.dart';
 
 void main() {
@@ -97,9 +96,7 @@ class HomePage extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>RippleAnimationPage()));
               }, child: Text('Ripple Effect')),
 
-              ElevatedButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>TestPage()));
-              }, child: Text('Testing'))
+
             ],
           ),
         ),
