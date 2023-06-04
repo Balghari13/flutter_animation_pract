@@ -36,33 +36,60 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Animation Home'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>FooAnimationPage()));
-            }, child: Text('Foo Animation')),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>AnimatedOpacityPage()));
-            }, child: Text('Animated Opacity')),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>CrossFadePage()));
-            }, child: Text('Cross Fade')),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>HeroAnimationPage()));
-            }, child: Text('Hero Animation')),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>ListWheelScrollPage()));
-            }, child: Text('List Wheel scroll')),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>ClipRRectPage()));
-            }, child: Text('Clip RRect')),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xff30cfd0),
+              Color(0x9f330867),
+              //Colors.blueGrey.shade50,
+            ],
+            begin: FractionalOffset(1.0,0.0),
+            end: FractionalOffset(0.0,1.1),
+          )
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 100,
+                height: 50,
+                decoration: BoxDecoration(
+                  gradient: RadialGradient(
+                    colors: [
+                      Colors.orange,
+                      Colors.redAccent
+                    ],
+                    center: Alignment.bottomCenter,
+                    stops: [0.0,1.0]
+                  )
+                ),
+              ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>FooAnimationPage()));
+              }, child: Text('Foo Animation')),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>AnimatedOpacityPage()));
+              }, child: Text('Animated Opacity')),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>CrossFadePage()));
+              }, child: Text('Cross Fade')),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>HeroAnimationPage()));
+              }, child: Text('Hero Animation')),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ListWheelScrollPage()));
+              }, child: Text('List Wheel scroll')),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ClipRRectPage()));
+              }, child: Text('Clip RRect')),
 
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>TestPage()));
-            }, child: Text('Testing'))
-          ],
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>TestPage()));
+              }, child: Text('Testing'))
+            ],
+          ),
         ),
       ),
     );
