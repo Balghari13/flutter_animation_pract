@@ -5,6 +5,7 @@ import 'package:practise/cross_fade.dart';
 import 'package:practise/foo_animation.dart';
 import 'package:practise/hero/hero_animation.dart';
 import 'package:practise/listwheel_scrollView.dart';
+import 'package:practise/map_list.dart';
 import 'package:practise/test.dart';
 
 void main() {
@@ -84,6 +85,9 @@ class HomePage extends StatelessWidget {
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>ClipRRectPage()));
               }, child: Text('Clip RRect')),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>MapListPage()));
+              }, child: Text('Mapping List')),
 
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>TestPage()));
