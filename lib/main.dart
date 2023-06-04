@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practise/animated_opacity.dart';
+import 'package:practise/clip_rrect.dart';
 import 'package:practise/cross_fade.dart';
 import 'package:practise/foo_animation.dart';
 import 'package:practise/hero/hero_animation.dart';
@@ -54,7 +55,9 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>ListWheelScrollPage()));
             }, child: Text('List Wheel scroll')),
-
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ClipRRectPage()));
+            }, child: Text('Clip RRect')),
 
             ElevatedButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>TestPage()));
