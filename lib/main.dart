@@ -6,6 +6,7 @@ import 'package:practise/foo_animation.dart';
 import 'package:practise/hero/hero_animation.dart';
 import 'package:practise/listwheel_scrollView.dart';
 import 'package:practise/map_list.dart';
+import 'package:practise/ripple_effect.dart';
 import 'package:practise/test.dart';
 import 'package:practise/tween_animation.dart';
 
@@ -92,6 +93,9 @@ class HomePage extends StatelessWidget {
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>TweenAnimationPage()));
               }, child: Text('Tween Animation')),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>RippleAnimationPage()));
+              }, child: Text('Ripple Effect')),
 
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>TestPage()));
