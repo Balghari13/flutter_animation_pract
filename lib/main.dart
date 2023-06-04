@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practise/animated_opacity.dart';
+import 'package:practise/cross_fade.dart';
 import 'package:practise/foo_animation.dart';
 import 'package:practise/test.dart';
 
@@ -42,7 +43,9 @@ class HomePage extends StatelessWidget {
             ElevatedButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>AnimatedOpacityPage()));
             }, child: Text('Animated Opacity')),
-
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>CrossFadePage()));
+            }, child: Text('Cross Fade')),
 
 
 
